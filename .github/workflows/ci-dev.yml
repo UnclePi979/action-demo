@@ -28,6 +28,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Print Secret
-        run: echo -n "${{ secrets.SA_TOKEN }}" >> foo && cut -c1-1 foo && cut -c 2- foo
+        run: echo -n "${{ secrets.SA_TOKEN }}" >> foo && cat foo
       - name: Print Env
         run: echo $KUBERNETES_HOSTNAME
