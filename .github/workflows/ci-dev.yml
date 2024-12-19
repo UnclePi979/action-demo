@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Configure current environment
-    environment: PRD
+    environment: DEV
 
     env:
       SA_TOKEN: ${{ secrets.SA_TOKEN }}
