@@ -32,3 +32,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "KUBERNETES_NAME: ${{ vars.KUBERNETES_NAME }}"
+          echo "SA_TOKEN: ${{ secrets.SA_TOKEN }}
