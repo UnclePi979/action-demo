@@ -18,7 +18,7 @@ jobs:
     environment: DEV
 
     env:
-      SA_TOKEN: ${{ secrets.SA_TOKEN }}
+      # SA_TOKEN: ${{ secrets.SA_TOKEN }}
       KUBERNETES_HOSTNAME: ${{ vars.KUBERNETES_HOSTNAME }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,6 +28,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Print Secret
-        run: echo $SA_TOKEN
+        run: echo ${{ secrets.SA_TOKEN }}
       - name: Print Env
         run: echo $KUBERNETES_HOSTNAME
