@@ -21,7 +21,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+        with:
+          SA_TOKEN: ${{ secrets.SA_TOKEN }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -32,6 +33,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "KUBERNETES_NAME: ${{ vars.KUBERNETES_NAME }}"
-          echo "SA_TOKEN: ${{ env.SA_TOKEN }}
-        env:
-          SA_TOKEN: ${{ secrets.SA_TOKEN }}
+          echo "SA_TOKEN: $SA_TOKEN"
+
