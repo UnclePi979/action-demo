@@ -19,7 +19,7 @@ jobs:
 
     env:
       # SA_TOKEN: ${{ secrets.SA_TOKEN }}
-      KUBERNETES_HOSTNAME: ${{ vars.KUBERNETES_HOSTNAME }}
+      KUBERNETES_HOSTNAME: ${{ vars }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
